@@ -9,8 +9,7 @@ This is a front end shopping-site appliction that uses vuejs3, animate.css, boot
 * Animate.css
 * bootstrap
 
-## Website Link
-[check it out](https://brume7.github.io/shopping-vue/).
+
 
 ## Project setup
 ```
