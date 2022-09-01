@@ -15,7 +15,7 @@
                     <div v-for="(val, index) in cart">
                         <div class="dropdown-item-text text-nowrap text-end">
                             <span class="badge badge-pill bg-warning align-text-top me-1">{{ val.qty }}</span>
-                            {{ val.item.name }}
+                            {{ val.item.title }}
                             <b>
                                 <price :value="cartItemPrice(index)"></price>
                             </b>

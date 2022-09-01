@@ -6,7 +6,7 @@
                 <label class="font-weight-bold me-2" for="formMax">Max :</label>
                 <input id="formMax" type="text" class="form-control w-25  mx-2 text-center" v-model="maxAmount"
                     @change="$parent.$emit('update:maximum', maxAmount)" />
-                <input type="range" class="form-range w-25" min="0" max="250" v-model="maxAmount"
+                <input type="range" class="form-range w-25" min="0" max="5000" v-model="maxAmount"
                     @input="$parent.$emit('update:maximum', maxAmount)" />
             </div>
         </div>
@@ -18,7 +18,7 @@ export default {
     name: 'PriceSlider',
     data() {
         return {
-            maxAmount: 99,
+            maxAmount: 1000,
         };
     },
     props: ['sliderStatus'],

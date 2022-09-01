@@ -1,7 +1,7 @@
 <template>
     <transition-group name="fade" tag="div" enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOut">
-        <div class="row d-flew mb-3 align-items-center" v-for="(val, index) in products" :key="index"
+        <div class="row d-flew mb-3 mt-2 align-items-center" v-for="(val, index) in products" :key="index"
             :data-index="index">
             <div class="row d-flew mb-3 align-items-center"
                 v-if="val.price <= Number(maximum) && val.price >= Number(minimum)">
@@ -9,10 +9,10 @@
                     <button class="btn btn-info" @click.stop="$parent.$emit('add', val)">+</button>
                 </div>
                 <div class="col-sm-4">
-                    <img class="img-fluid d-block" :src="val.image" :alt="val.name" />
+                    <img class="img-fluid d-block" :src="val.thumbnail" :alt="val.title" />
                 </div>
                 <div class="col">
-                    <h3 class="h3 text-info " v-text="val.name"></h3>
+                    <h3 class="h3 text-info " v-text="val.title"></h3>
                     <p class="mb-0" v-text="val.description"></p>
                     <div class="h5 float-end">
                         <Price :value="val.price"></Price>

@@ -15,7 +15,7 @@ export default {
     return {
       sliderStatus: false,
       minimum: 0,
-      maximum: 100,
+      maximum: 1000,
       products: [],
       cart: [],
     };
@@ -46,15 +46,15 @@ export default {
   methods: {
     async loadProducts() {
 
-      // let url = 'https://dummyjson.com/products'
-      let url = 'https://hplussport.com/api/products/order/price'
+      let url = 'https://dummyjson.com/products'
+      //let url = 'https://hplussport.com/api/products/order/price'
       const req = new XMLHttpRequest();
       req.open("GET", url, true);
       req.send();
       req.onload = () => {
         let store = JSON.parse(req.responseText);
-        // let goods = store.products;
-        this.products = store;
+        let goods = store.products;
+        this.products = goods;
       }
     },
     addItem: function (products) {

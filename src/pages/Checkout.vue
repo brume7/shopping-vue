@@ -23,7 +23,7 @@
                     <button @click="$emit('delete', index)" class="btn btn-outline-info">-</button>
                   </div>
                 </td>
-                <th scope="row">{{val.item.name}}</th>
+                <th scope="row">{{val.item.title}}</th>
                 <td class="text-center">{{val.qty}}</td>
                 <td class="text-right">{{Number(val.item.price)}}</td>
                 <td class="text-right">{{Number(val.qty * val.item.price)}}</td>
