@@ -1,10 +1,10 @@
 <template>
-    <transition-group name="fade" tag="div" enter-active-class="animate__animated animate__fadeInRight"
+    <transition-group name="fade" class="row" tag="div" enter-active-class="animate__animated animate__fadeInRight"
         leave-active-class="animate__animated animate__fadeOut">
-        <div class="row d-flew mb-3 mt-2 align-items-center" v-for="(val, index) in products" :key="index"
+        <div class="row d-flex mb-3 mt-2 align-items-center col-sm-6" v-for="(val, index) in products" :key="index"
             :data-index="index">
-            <div class="row d-flew mb-3 align-items-center"
-                v-if="val.price <= Number(maximum) && val.price >= Number(minimum)">
+            <div v-if="val.price <= Number(maximum) && val.price >= Number(minimum)"
+                class="row d-flex mb-3 align-items-center">
                 <div class="col-sm-1">
                     <button class="btn btn-info" @click.stop="$parent.$emit('add', val)">+</button>
                 </div>
