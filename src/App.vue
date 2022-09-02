@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import _ from "lodash";
 
 export default {
   name: "App",
@@ -54,6 +55,7 @@ export default {
       req.onload = () => {
         let store = JSON.parse(req.responseText);
         let goods = store.products;
+        goods  = _.sortBy(goods, [function(o) { return o.price; }])
         this.products = goods;
       }
     },

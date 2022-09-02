@@ -7,7 +7,8 @@ This is a front end shopping-site appliction that uses vuejs3, animate.css, boot
 ## Built with
 * Vue js
 * Animate.css
-* bootstrap
+* Bootstrap
+* Lodash
 
 ## Website Link
 [check it out](https://brume7.github.io/shopping-vue/).
